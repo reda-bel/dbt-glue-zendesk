@@ -8,6 +8,7 @@ dbt_glue_zendesk:
       host: airbyte-cluster-1.cjtbtonixdig.us-east-2.redshift.amazonaws.com
       user: redabel
       password: P4ssw0rd!
+      region: us-east-2
 
       # Other Redshift configs:
       port: 5439
