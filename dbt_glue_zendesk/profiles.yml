@@ -1,0 +1,21 @@
+dbt_glue_zendesk:
+  target: dev
+  outputs:
+    dev:
+      type: redshift
+      method: iam
+      cluster_id: airbyte-cluster-1
+      host: airbyte-cluster-1.cjtbtonixdig.us-east-2.redshift.amazonaws.com
+      user: redabel
+      password: P4ssw0rd!
+
+      # Other Redshift configs:
+      port: 5439
+      dbname: dev
+      schema: public
+      threads: 4
+      keepalives_idle: 240 # default 240 seconds
+      connect_timeout: 10 # default 10 seconds
+      retries: 1 # default 1 retry on error/timeout when opening connections
+      # search_path: public # optional, but not recommended
+      ra3_node: true # enables cross-database sources
